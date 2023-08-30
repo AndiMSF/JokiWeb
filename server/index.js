@@ -3,6 +3,10 @@ const bodyParser = require("body-parser")
 const mongoose = require("mongoose")
 const dotenv = require("dotenv")
 
+// Routes
+const authRoutes = require("./routes/auth.js")
+
+
 const app = express()
 dotenv.config()
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -21,6 +25,8 @@ const connectDatabase = async (req, res) => {
         console.log(err);
     }
 }
+
+app.use("/auth", authRoutes)
 
 const PORT = 8000
 connectDatabase().then(() => {
