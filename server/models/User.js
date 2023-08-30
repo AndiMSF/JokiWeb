@@ -17,19 +17,12 @@ const UserSchema = new mongoose.Schema(
             type: Array,
             default: [],
         },
-        firstName: {
+        fullName: {
             type: String,
             required: true,
             min: 2,
             max: 50,
-        },
-        lastName: {
-            type: String,
-            required: true,
-            min: 2,
-            max: 50,
-        },
-        
+        },     
     },{timestamps: true}
 )
 

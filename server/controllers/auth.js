@@ -7,8 +7,7 @@ const registerControllers = async (req, res) => {
         const {
             email,
             password,
-            firstName,
-            lastName
+            fullName,
         } = req.body
 
         const salt = await bcrypt.genSalt()
@@ -17,14 +16,12 @@ const registerControllers = async (req, res) => {
         const newUser = new User({
             email,
             password: passwordHash,
-            firstName,
-            lastName
+            fullName,
         })
 
         const savedUser = await newUser.save()
         res.status(201).json({ message: savedUser })
-    } catch (err)
-    {
+    } catch (err){
         res.status(500).json({ error: err.message })
     }
 }
@@ -57,10 +54,9 @@ const loginControllers = async (req, res) => {
         })
 
         delete user.password
-
+        console.log(token);
         res.status(200).json({ message: "User logged in "+user})
-    } catch (err)
-    {
+    } catch (err){
         res.status(500).json({ error: err.message })
     }
 }

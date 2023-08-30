@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken")
 
-const verifyToken = async (req, res) => {
+const verifyToken = async (req, res, next) => {
     try {
         // Check apakah user punya token apa tidak
         let token = req.cookies.jwt
@@ -20,7 +20,7 @@ const verifyToken = async (req, res) => {
             })
         }
 
-    } catch {
+    } catch (err) {
         res.status(500).json({ error: err.message })
     }
 }
