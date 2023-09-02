@@ -1,0 +1,53 @@
+* {
+    font-family: Inter;
+}
+
+.card__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.card__button {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input__form {
+    display: flex;
+    flex-direction: column;
+}
+
+#button__daftar {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    color: var(--default-white, #FFF);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px; 
+}
+
+#button__daftar:hover {
+    border-color: var(--primary-color);
+}
+
+#button__notdaftar {
+    border-color: var(--primary-color);
+    border: 1px solid var(--primary-color, #7749F8);
+    background: var(--default-white, #FFF);
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    color: var(--indigo-500, #6610F2);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px; /* 112.5% */ 
+}   
