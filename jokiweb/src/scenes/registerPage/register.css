@@ -14,24 +14,11 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 100%;
 }
 
 .input__form {
     display: flex;
     flex-direction: column;
-}
-
-.forgot__password {
-    color: var(--indigo-500, #6610F2);
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 16px; /* 114.286% */
-    text-decoration-line: underline; 
-    text-align: right;
-    padding: 0.5rem 0.75rem;
 }
 
 #button__daftar {
